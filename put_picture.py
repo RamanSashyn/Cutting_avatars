@@ -26,7 +26,7 @@ image3_blue = Image.blend(image1_blue, image2_blue, 0.5)
 coordinates_green = (25, 0, green_channel.width - 25, green_channel.height)
 green_channel_cropped = green_channel.crop(coordinates_green)
 
-new_image = Image.merge("RGB", (image3_red, image3_blue, green_channel_cropped))
+new_image = Image.merge("RGB", (image3_red, green_channel_cropped, image3_blue))
 
 new_image.save("new_image.jpg")
 
